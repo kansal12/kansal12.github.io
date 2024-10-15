@@ -28,7 +28,7 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
-theme: kitian616/jekyll-TeXt-theme
+theme: jekyll-TeXt-theme
 plugins:
   - jekyll-feed
 
