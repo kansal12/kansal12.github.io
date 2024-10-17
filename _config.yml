@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 theme: jekyll-teXt-theme
 
+=======
+>>>>>>> origin/master
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -58,7 +61,7 @@ author:
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
 repository: kansal12/kansal12.github.io
-repository_tree: master
+repository_tree: main
 
 
 ## => Paths
