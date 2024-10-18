@@ -20,7 +20,7 @@ url: https://kansal12.github.io
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
 repository: kansal12/kansal12.github.io
-# repository_tree: main
+repository_tree: main
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
 #feed:
 #  path: rss-feed.xml
