@@ -15,12 +15,12 @@ title: "Platy Studio"
 description: "a minimalist Jekyll theme for running a blog or publication"
 author: "Vaibhav Kansal"
 url: https://kansal12.github.io
-# baseurl: "" # Leave empty for the root
+baseurl: "" # Leave empty for the root
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
 repository: kansal12/kansal12.github.io
-repository_tree: main
+# repository_tree: main
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
 #feed:
 #  path: rss-feed.xml
