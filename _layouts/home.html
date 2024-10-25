@@ -3,20 +3,104 @@ layout: default
 title: Home
 ---
 
-{% for post in paginator.posts %}
-  {% include featured-post.html %}
-{% endfor %}
+<!-- Main Container -->
+<div class="homepage-content">
+  <!-- Headline Section -->
+  <h1 class="headline">Welcome to My Site</h1>
+
+  <!-- Featured Image -->
+  <div class="featured-image">
+    <img
+      src="https://example.com/path-to-your-image.jpg"
+      alt="Featured Image"
+    />
+  </div>
+
+  <!-- Video Section -->
+  <div class="video-section">
+    <h2>Featured Videos</h2>
+    <div class="videos">
+      <div class="video">
+        <video controls>
+          <source
+            src="https://example.com/path-to-your-video1.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="video">
+        <video controls>
+          <source
+            src="https://example.com/path-to-your-video2.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="video">
+        <video controls>
+          <source
+            src="https://example.com/path-to-your-video3.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Pagination links -->
 <div class="pagination">
   {% if paginator.next_page %}
-    <a class="pagination-button pagination-active next" href="{{ site.github.url }}{{ paginator.next_page_path }}">{{ site.data.settings.pagination.previous_page }}</a>
+  <a
+    class="pagination-button pagination-active next"
+    href="{{ site.github.url }}{{ paginator.next_page_path }}"
+    >{{ site.data.settings.pagination.previous_page }}</a
+  >
   {% else %}
-    <span class="pagination-button">{{ site.data.settings.pagination.previous_page }}</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    <a class="pagination-button pagination-active" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">{{ site.data.settings.pagination.next_page }}</a>
+  <span class="pagination-button"
+    >{{ site.data.settings.pagination.previous_page }}</span
+  >
+  {% endif %} {% if paginator.previous_page %}
+  <a
+    class="pagination-button pagination-active"
+    href="{{ site.baseurl }}{{ paginator.previous_page_path }}"
+    >{{ site.data.settings.pagination.next_page }}</a
+  >
   {% else %}
-    <span class="pagination-button">{{ site.data.settings.pagination.next_page }}</span>
+  <span class="pagination-button"
+    >{{ site.data.settings.pagination.next_page }}</span
+  >
   {% endif %}
 </div>
+
+<!-- CSS for styling -->
+<style>
+  .homepage-content {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .headline {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  .featured-image img {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .video-section {
+    margin-top: 30px;
+  }
+  .videos {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+  }
+  .video video {
+    max-width: 100%;
+    height: auto;
+  }
+</style>

@@ -115,62 +115,95 @@
 </header>
 
       <div class="content-wrapper">
-        
-  <article>
-  <a href="/data">
-    <div class="featured-post" style="background-image:url(/assets/img/cuba-1.jpg)">
-      <h2><span>Welcome to Millennial!</span></h2>
+        <!-- Main Container -->
+<div class="homepage-content">
+  <!-- Headline Section -->
+  <h1 class="headline">Welcome to My Site</h1>
+
+  <!-- Featured Image -->
+  <div class="featured-image">
+    <img
+      src="https://example.com/path-to-your-image.jpg"
+      alt="Featured Image"
+    />
+  </div>
+
+  <!-- Video Section -->
+  <div class="video-section">
+    <h2>Featured Videos</h2>
+    <div class="videos">
+      <div class="video">
+        <video controls>
+          <source
+            src="https://example.com/path-to-your-video1.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="video">
+        <video controls>
+          <source
+            src="https://example.com/path-to-your-video2.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="video">
+        <video controls>
+          <source
+            src="https://example.com/path-to-your-video3.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
-  </a>
-</article>
-
-
-  <article>
-  <a href="/data">
-    <div class="featured-post" style="background-image:url(/assets/img/city-1.jpg)">
-      <h2><span>Getting Started</span></h2>
-    </div>
-  </a>
-</article>
-
-
-  <article>
-  <a href="/data">
-    <div class="featured-post" style="background-image:url(/assets/img/arctic-1.jpg)">
-      <h2><span>Text Formatting</span></h2>
-    </div>
-  </a>
-</article>
-
-
-  <article>
-  <a href="/data">
-    <div class="featured-post" style="background-image:url(/assets/img/arctic-2.jpg)">
-      <h2><span>Learning Resources</span></h2>
-    </div>
-  </a>
-</article>
-
-
-  <article>
-  <a href="/data">
-    <div class="featured-post" style="background-image:url(/assets/img/cuba-2.jpg)">
-      <h2><span>About the Author</span></h2>
-    </div>
-  </a>
-</article>
-
-
+  </div>
+</div>
 
 <!-- Pagination links -->
 <div class="pagination">
   
-    <span class="pagination-button">Older</span>
-  
-  
-    <span class="pagination-button">Newer</span>
+  <span class="pagination-button"
+    >Older</span
+  >
+   
+  <span class="pagination-button"
+    >Newer</span
+  >
   
 </div>
+
+<!-- CSS for styling -->
+<style>
+  .homepage-content {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .headline {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  .featured-image img {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .video-section {
+    margin-top: 30px;
+  }
+  .videos {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+  }
+  .video video {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
 
       </div>
       <footer class="footer">
