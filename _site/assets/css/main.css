@@ -274,6 +274,8 @@ pre code {
   .site-header {
     min-height: 56px;
     width: 95vw;
+    display: flex;
+    justify-content: space-between;
     position: fixed;
     background-color: white;
     box-shadow: 0 5px 6px -6px #bbb;
@@ -639,7 +641,7 @@ pre code {
   transition: 1s;
 }
 .fa-medium:hover {
-  color: #00AB6C;
+  color: #00ab6c;
 }
 
 .fa-codepen {

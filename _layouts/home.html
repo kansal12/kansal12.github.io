@@ -1,19 +1,22 @@
 ---
 layout: default
 title: Home
+video: true
 ---
 
 <!-- Main Container -->
 <div class="homepage-content">
   <!-- Headline Section -->
-  <h1 class="headline">Welcome to My Site</h1>
 
   <!-- Featured Image -->
   <div class="featured-image">
-    <img
-      src="https://example.com/path-to-your-image.jpg"
-      alt="Featured Image"
-    />
+    <h1 class="headline">The AI Video Production Studio</h1>
+    <p>
+      Box office quality dubbing which retains the orignial context, meaning,
+      speaker’s voice and expression style, optimized for entertainment content
+      like Hollywood movies
+    </p>
+    <!-- <img src="/assets/img/background_banner.jpg" alt="Featured Image" /> -->
   </div>
 
   <!-- Video Section -->
@@ -21,59 +24,93 @@ title: Home
     <h2>Featured Videos</h2>
     <div class="videos">
       <div class="video">
-        <video controls>
-          <source
-            src="https://example.com/path-to-your-video1.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="video">
-        <video controls>
-          <source
-            src="https://example.com/path-to-your-video2.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="video">
-        <video controls>
-          <source
-            src="https://example.com/path-to-your-video3.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
+        <h1>Dual Audio Track Video Player</h1>
+        <!-- Video Element -->
+        <video
+          width="300"
+          height="300"
+          id="videoPlayer"
+          src="https://youtu.be/86BKEv0X2xU?si=yRbwp83dATCR_kq1"
+          muted
+          controls
+        ></video>
+        <iframe
+          width="560"
+          height="315"
+          src="https://youtu.be/Kf96DqoWtyI?si=_GhEXXn2KNbnq6DA"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+
+        <!-- Audio Tracks -->
+        <audio id="englishAudio" src="/assets/video/english_audio.mp3"></audio>
+        <audio id="spanishAudio" src="/assets/video/spanish_audio.wav"></audio>
+
+        <!-- Language Toggle Buttons -->
+        <!-- <div>
+          <button id="englishButton" onclick="switchLanguage('english')">
+            Play English Audio
+          </button>
+          <button id="spanishButton" onclick="switchLanguage('hindi')">
+            Play Hindi Audio
+          </button>
+        </div> -->
+
+        <!-- Link to JavaScript file -->
+        <!-- <script>
+          const video = document.getElementById("videoPlayer");
+          const englishAudio = document.getElementById("englishAudio");
+          const spanishAudio = document.getElementById("spanishAudio");
+          const englishButton = document.getElementById("englishButton");
+          const spanishButton = document.getElementById("spanishButton");
+
+          let currentAudio = englishAudio; // Default to English audio
+
+          function syncAudio() {
+            currentAudio.currentTime = video.currentTime;
+          }
+
+          video.addEventListener("play", () => currentAudio.play());
+          // englishAudio.addEventListener("play", () => {
+          //   video.play();
+          //   currentAudio.play();
+          // });
+          // spanishAudio.addEventListener("play", () => {
+          //   video.play();
+          //   currentAudio.play();
+          // });
+          video.addEventListener("pause", () => currentAudio.pause());
+          video.addEventListener("timeupdate", syncAudio);
+
+          function switchLanguage(language) {
+            // Pause the current audio
+            currentAudio.pause();
+
+            // Set the current audio based on the selected language
+            if (language === "english") {
+              currentAudio = englishAudio;
+              englishButton.classList.add("active-button");
+              spanishButton.classList.remove("active-button");
+            } else if (language === "hindi") {
+              currentAudio = spanishAudio;
+              spanishButton.classList.add("active-button");
+              englishButton.classList.remove("active-button");
+            }
+
+            // Sync audio with video and play if video is playing
+            currentAudio.currentTime = video.currentTime;
+            // Check if video is paused
+            if (video.paused) {
+              video.play(); // Start playing the video
+              currentAudio.play(); // Start playing the selected audio
+            } else {
+              currentAudio.play(); // Continue playing the selected audio if video is already playing
+            }
+          }
+        </script> -->
       </div>
     </div>
   </div>
-</div>
-
-<!-- Pagination links -->
-<div class="pagination">
-  {% if paginator.next_page %}
-  <a
-    class="pagination-button pagination-active next"
-    href="{{ site.github.url }}{{ paginator.next_page_path }}"
-    >{{ site.data.settings.pagination.previous_page }}</a
-  >
-  {% else %}
-  <span class="pagination-button"
-    >{{ site.data.settings.pagination.previous_page }}</span
-  >
-  {% endif %} {% if paginator.previous_page %}
-  <a
-    class="pagination-button pagination-active"
-    href="{{ site.baseurl }}{{ paginator.previous_page_path }}"
-    >{{ site.data.settings.pagination.next_page }}</a
-  >
-  {% else %}
-  <span class="pagination-button"
-    >{{ site.data.settings.pagination.next_page }}</span
-  >
-  {% endif %}
 </div>
 
 <!-- CSS for styling -->
@@ -83,12 +120,16 @@ title: Home
     margin: 0 auto;
   }
   .headline {
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 40px;
+    margin: 0px !important;
+    margin-bottom: 0.625rem;
   }
-  .featured-image img {
-    max-width: 80%;
-    height: auto;
+  .featured-image {
+    box-sizing: border-box;
+    background-image: url("/assets/img/background_banner.jpg");
+    background-size: cover;
+    padding: 80px 0;
+    height: 460px;
     margin: 0 auto;
   }
   .video-section {
@@ -102,5 +143,23 @@ title: Home
   .video video {
     max-width: 100%;
     height: auto;
+  }
+  /* Default button style */
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Style for active button */
+  .active-button {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    border: 2px solid #0056b3;
   }
 </style>
