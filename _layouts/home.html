@@ -1,165 +1,86 @@
 ---
-layout: default
-title: Home
-video: true
+layout: base
+title: home
 ---
 
-<!-- Main Container -->
-<div class="homepage-content">
-  <!-- Headline Section -->
+{% include header.html %}
 
-  <!-- Featured Image -->
-  <div class="featured-image">
-    <h1 class="headline">The AI Video Production Studio</h1>
-    <p>
-      Box office quality dubbing which retains the orignial context, meaning,
-      speaker’s voice and expression style, optimized for entertainment content
-      like Hollywood movies
-    </p>
-    <!-- <img src="/assets/img/background_banner.jpg" alt="Featured Image" /> -->
+<div class="homepage-content">
+  <!-- Banner Section -->
+  <div
+    class="banner-section"
+    style="background-image: url('{{ site.data.home.banner_image }}');"
+  >
+    <div class="banner-content">
+      <h1>{{ site.data.home.banner_heading }}</h1>
+      <p>{{ site.data.home.banner_subheading }}</p>
+    </div>
   </div>
 
-  <!-- Video Section -->
+  <!-- GIF Section -->
+  <div class="gif-section">
+    <h2>{{ site.data.home.gif_heading }}</h2>
+    <img src="{{ site.data.home.gif_image }}" alt="Demo GIF" class="demo-gif" />
+  </div>
+
+  <!-- Demo Video Section -->
   <div class="video-section">
-    <h2>Featured Videos</h2>
-    <div class="videos">
-      <div class="video">
-        <h1>Dual Audio Track Video Player</h1>
-        <!-- Video Element -->
-        <video
-          width="300"
-          height="300"
-          id="videoPlayer"
-          src="https://youtu.be/86BKEv0X2xU?si=yRbwp83dATCR_kq1"
-          muted
-          controls
-        ></video>
-        <iframe
-          width="560"
-          height="315"
-          src="https://youtu.be/Kf96DqoWtyI?si=_GhEXXn2KNbnq6DA"
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
+    <h2>{{ site.data.home.video_heading }}</h2>
+    <video
+      controls
+      width="600"
+      height="300"
+      preload="metadata"
+      playsinline
+      poster="{{ '/assets/img/path.jpg' | relative_url }}"
+    >
+      <source
+        src="{{ '/assets/video/video.mp4' | relative_url }}"
+        type="video/mp4"
+      />
+    </video>
+  </div>
 
-        <!-- Audio Tracks -->
-        <audio id="englishAudio" src="/assets/video/english_audio.mp3"></audio>
-        <audio id="spanishAudio" src="/assets/video/spanish_audio.wav"></audio>
-
-        <!-- Language Toggle Buttons -->
-        <!-- <div>
-          <button id="englishButton" onclick="switchLanguage('english')">
-            Play English Audio
-          </button>
-          <button id="spanishButton" onclick="switchLanguage('hindi')">
-            Play Hindi Audio
-          </button>
-        </div> -->
-
-        <!-- Link to JavaScript file -->
-        <!-- <script>
-          const video = document.getElementById("videoPlayer");
-          const englishAudio = document.getElementById("englishAudio");
-          const spanishAudio = document.getElementById("spanishAudio");
-          const englishButton = document.getElementById("englishButton");
-          const spanishButton = document.getElementById("spanishButton");
-
-          let currentAudio = englishAudio; // Default to English audio
-
-          function syncAudio() {
-            currentAudio.currentTime = video.currentTime;
-          }
-
-          video.addEventListener("play", () => currentAudio.play());
-          // englishAudio.addEventListener("play", () => {
-          //   video.play();
-          //   currentAudio.play();
-          // });
-          // spanishAudio.addEventListener("play", () => {
-          //   video.play();
-          //   currentAudio.play();
-          // });
-          video.addEventListener("pause", () => currentAudio.pause());
-          video.addEventListener("timeupdate", syncAudio);
-
-          function switchLanguage(language) {
-            // Pause the current audio
-            currentAudio.pause();
-
-            // Set the current audio based on the selected language
-            if (language === "english") {
-              currentAudio = englishAudio;
-              englishButton.classList.add("active-button");
-              spanishButton.classList.remove("active-button");
-            } else if (language === "hindi") {
-              currentAudio = spanishAudio;
-              spanishButton.classList.add("active-button");
-              englishButton.classList.remove("active-button");
-            }
-
-            // Sync audio with video and play if video is playing
-            currentAudio.currentTime = video.currentTime;
-            // Check if video is paused
-            if (video.paused) {
-              video.play(); // Start playing the video
-              currentAudio.play(); // Start playing the selected audio
-            } else {
-              currentAudio.play(); // Continue playing the selected audio if video is already playing
-            }
-          }
-        </script> -->
+  <!-- Testimonials Section -->
+  <div class="testimonials-section">
+    <h2>{{ site.data.home.testimonials_heading }}</h2>
+    <div class="testimonials">
+      {% for testimonial in site.data.home.testimonials %}
+      <div class="testimonial">
+        <p class="testimonial-text">"{{ testimonial.text }}"</p>
+        <p class="testimonial-author">- {{ testimonial.author }}</p>
       </div>
+      {% endfor %}
     </div>
   </div>
 </div>
-
-<!-- CSS for styling -->
 <style>
-  .homepage-content {
-    text-align: center;
-    margin: 0 auto;
-  }
-  .headline {
-    font-size: 40px;
-    margin: 0px !important;
-    margin-bottom: 0.625rem;
-  }
-  .featured-image {
-    box-sizing: border-box;
-    background-image: url("/assets/img/background_banner.jpg");
+  .banner-section {
     background-size: cover;
-    padding: 80px 0;
-    height: 460px;
-    margin: 0 auto;
-  }
-  .video-section {
-    margin-top: 30px;
-  }
-  .videos {
-    display: flex;
-    justify-content: space-around;
-    gap: 15px;
-  }
-  .video video {
-    max-width: 100%;
-    height: auto;
-  }
-  /* Default button style */
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    background-color: #f0f0f0;
-    color: #333;
-    transition: background-color 0.3s ease;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
   }
 
-  /* Style for active button */
-  .active-button {
-    background-color: #007bff;
-    color: #fff;
+  .gif-section,
+  .video-section,
+  .testimonials-section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .testimonial {
+    margin: 20px auto;
+    max-width: 600px;
+  }
+
+  .testimonial-text {
+    font-style: italic;
+  }
+
+  .testimonial-author {
     font-weight: bold;
-    border: 2px solid #0056b3;
+    text-align: right;
   }
 </style>
