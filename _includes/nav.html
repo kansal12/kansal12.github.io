@@ -2,7 +2,7 @@
   class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom {% if page.nav-short %}top-nav-short-permanent{% else %}top-nav-regular{% endif %}"
 >
   {%- if site.title-img -%}
-  <a class="navbar-brand navbar-brand-logo" href="{{ '/' | absolute_url }}"
+  <a class="navbar-brand navbar-brand-logo" href="{{ site.home-url }}"
     ><img alt="{{ site.title }} Logo" src="{{ site.title-img | relative_url}}"
   /></a>
   {%- elsif site.title -%}
@@ -64,17 +64,20 @@
   </div>
 
   {% if site.navbar-extra %} {% for file in site.navbar-extra %} {% include {{
-  file }} %} {% endfor %} {% endif %}
-
-  <!-- {% if site.avatar and page.show-avatar != false %}
-    <div class="avatar-container">
-      <div class="avatar-img-border">
-        <a href="{{ '/' | absolute_url }}">
-          <img alt="Navigation bar avatar" class="avatar-img" src="{{ site.avatar | relative_url }}" />
-        </a>
-      </div>
+  file }} %} {% endfor %} {% endif %} {% if site.avatar and page.show-avatar !=
+  false %}
+  <div class="avatar-container">
+    <div class="avatar-img-border">
+      <a href="{{ '/' | absolute_url }}">
+        <img
+          alt="Navigation bar avatar"
+          class="avatar-img"
+          src="{{ site.avatar | relative_url }}"
+        />
+      </a>
     </div>
-  {% endif %} -->
+  </div>
+  {% endif %}
 </nav>
 
 {% include search.html %}
