@@ -34,5 +34,5 @@ Our product employs advanced time synchronization techniques to ensure that the 
 ## 8. Voice Volume: Balancing Act
 Our algorithm dynamically changes voice loudness to match the original recording, taking into account aspects like direction and distance from the microphone, as well as emotional intensity.
 
-Please check out our demos <link> to the above in action. Also, feel free to schedule a call with our team to know more. Click Here.
+***Please check out our demos <link> to the above in action. Also, feel free to schedule a call with our team to know more. Click Here.***
 
