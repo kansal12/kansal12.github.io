@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Platy Studio: Revolutionizing Video Production with AI
+title: Platy Studio- Revolutionizing Video Production with AI
 subtitle: Our Motivations and problems that we want to solve.
 author: Neha Khosla
 ---
