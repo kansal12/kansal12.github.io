@@ -1,4 +1,4 @@
-<nav
+<!-- <nav
   class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom {% if page.nav-short %}top-nav-short-permanent{% else %}top-nav-regular{% endif %}"
 >
   {%- if site.title-img -%}
@@ -80,4 +80,37 @@
   {% endif %}
 </nav>
 
-{% include search.html %}
+{% include search.html %} -->
+
+<!-- <nav class="navbar">
+  <div class="logo">
+    <img alt="{{ site.title }} Logo" src="{{ site.title-img | relative_url}}" />
+  </div>
+  <div class="nav-link">
+    <a href="#">BLOG</a>
+    <a href="#">CAREERS</a>
+  </div>
+
+  <div>
+    <button class="button contact-us-button">Contact Us</button>
+    <!-- <button class="button blog-button">Blog</button></li> -->
+  </div>
+</nav> -->
+
+<head>
+  <!-- Link to the shared header's CSS -->
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/kansal12/platystudio_home/main/css/header.css">
+</head>
+<body>
+  <div id="header"></div>
+  <script>
+    fetch('https://raw.githubusercontent.com/kansal12/platystudio_home/main/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+  </script>
+  <!-- Link to the shared header's JS -->
+  <script src="https://raw.githubusercontent.com/kansal12/platystudio_home/main/js/header.js"></script>
+</body>
+

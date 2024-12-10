@@ -120,7 +120,7 @@
   
 
 
-  <nav
+  <!-- <nav
   class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"
 ><a class="navbar-brand navbar-brand-logo" href="https://chiranjiv37.github.io/platy_website/"
     ><img alt="My website Logo" src="/assets/img/platy-studio-logo.png"
@@ -178,6 +178,39 @@
 </div>
 
 
+ -->
+
+<!-- <nav class="navbar">
+  <div class="logo">
+    <img alt="My website Logo" src="/assets/img/platy-studio-logo.png" />
+  </div>
+  <div class="nav-link">
+    <a href="#">BLOG</a>
+    <a href="#">CAREERS</a>
+  </div>
+
+  <div>
+    <button class="button contact-us-button">Contact Us</button>
+    <!-- <button class="button blog-button">Blog</button></li> -->
+  </div>
+</nav> -->
+
+<head>
+  <!-- Link to the shared header's CSS -->
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/kansal12/platystudio_home/main/css/header.css">
+</head>
+<body>
+  <div id="header"></div>
+  <script>
+    fetch('https://raw.githubusercontent.com/kansal12/platystudio_home/main/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+  </script>
+  <!-- Link to the shared header's JS -->
+  <script src="https://raw.githubusercontent.com/kansal12/platystudio_home/main/js/header.js"></script>
+</body>
 
 
 
@@ -456,7 +489,7 @@
 </main>
 
 
-  <footer>
+  <!-- <footer>
   <div class="container-md beautiful-jekyll-footer">
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
@@ -543,7 +576,7 @@
       </div>
     </div>
   </div>
-</footer>
+</footer> -->
 
 
   

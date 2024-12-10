@@ -24,6 +24,52 @@ layout: null
   --mid-col: #808080;
 }
 
+/* copy past nav bar css from platysudio_home */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: transparent;
+}
+.nav-link a {
+  padding: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+}
+.logo {
+  display: flex;
+  align-items: centre;
+}
+
+.logo img {
+  mix-blend-mode: lighten;
+  height: 20px;
+  width: auto;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
+}
+.button:hover {
+  background-color: #e3e3e3;
+}
+.contact-us-button,
+.book-demo-button {
+  background-color: #ffffff; /* White */
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
 /* --- General --- */
 
 html {
@@ -200,7 +246,8 @@ img {
 .navbar-custom .navbar-brand-logo img,
 .navbar-custom.top-nav-short .navbar-brand-logo img,
 .navbar-custom.top-nav-short-permanent .navbar-brand-logo img {
-  height: 2.5rem;
+  height: 24px;
+  mix-blend-mode: lighten;
 }
 
 .navbar-custom .navbar-nav .nav-item {
@@ -250,7 +297,8 @@ img {
   }
 
   .navbar-custom .navbar-brand-logo img {
-    height: 3.125rem;
+    height: 24px;
+    mix-blend-mode: lighten;
   }
 
   .navbar-expand-xl .navbar-nav .nav-link {
@@ -666,7 +714,8 @@ footer .footer-custom-content {
 /* --- Post and page headers --- */
 
 .intro-header {
-  margin: 5rem 0 1.25rem;
+  /* margin: 5rem 0 1.25rem; */
+  margin: 50px 0 1.25rem;
   position: relative;
 }
 .intro-header.big-img {
@@ -752,7 +801,8 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
 }
 @media (min-width: 1200px) {
   .intro-header {
-    margin-top: 8.125rem;
+    /* margin-top: 8.125rem; */
+    margin-top: 50px;
   }
   .intro-header.big-img {
     margin-top: 5.6875rem; /* Full navbar is small navbar + 20px padding on each side when expanded */
