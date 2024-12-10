@@ -78,9 +78,9 @@
     </div>
   </div>
   {% endif %}
-</nav>
+</nav>-->
 
-{% include search.html %} -->
+{% include search.html %}
 
 <!-- <nav class="navbar">
   <div class="logo">
@@ -93,24 +93,30 @@
 
   <div>
     <button class="button contact-us-button">Contact Us</button>
-    <!-- <button class="button blog-button">Blog</button></li> -->
+    
   </div>
 </nav> -->
 
-<head>
-  <!-- Link to the shared header's CSS -->
-  <link rel="stylesheet" href="https://raw.githubusercontent.com/kansal12/platystudio_home/main/css/header.css">
-</head>
 <body>
   <div id="header"></div>
   <script>
-    fetch('https://raw.githubusercontent.com/kansal12/platystudio_home/main/header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header').innerHTML = data;
+    fetch(
+      "https://raw.githubusercontent.com/kansal12/platystudio_home/main/header.html"
+    )
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("header").innerHTML = data;
+        // Initialize header.js functionality
+        const hamburgerMenu = document.querySelector(".hamburger-menu");
+        const mobileMenu = document.querySelector(".mobile-menu");
+
+        if (hamburgerMenu && mobileMenu) {
+          hamburgerMenu.addEventListener("click", () => {
+            mobileMenu.classList.toggle("active"); // Add or remove the "active" class
+          });
+        }
       });
   </script>
   <!-- Link to the shared header's JS -->
   <script src="https://raw.githubusercontent.com/kansal12/platystudio_home/main/js/header.js"></script>
 </body>
-
