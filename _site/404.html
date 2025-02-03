@@ -11,7 +11,7 @@
 
   
 
-  <title>404 - Page not found | My website</title>
+  <title>404 - Page not found | </title>
 
   
   
@@ -26,7 +26,7 @@
   
 
   
-  <link rel="alternate" type="application/rss+xml" title="My website" href="http://localhost:4000/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
   
 
   
@@ -81,8 +81,8 @@
   
 
   
-  <meta property="og:site_name" content="My website">
-  <meta property="og:title" content="404 - Page not found | My website">
+  <meta property="og:site_name" content="">
+  <meta property="og:title" content="404 - Page not found | ">
   <meta property="og:description" content="Whoops, this page doesn&apos;t exist.
   Move along. (404 error)">
 
@@ -100,7 +100,7 @@
   <meta name="twitter:site" content="@daattali">
   <meta name="twitter:creator" content="@daattali">
 
-  <meta property="twitter:title" content="404 - Page not found | My website">
+  <meta property="twitter:title" content="404 - Page not found | ">
   <meta property="twitter:description" content="Whoops, this page doesn&apos;t exist.
   Move along. (404 error)">
 
@@ -126,7 +126,7 @@
   <!-- <nav
   class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"
 ><a class="navbar-brand navbar-brand-logo" href="https://chiranjiv37.github.io/platy_website/"
-    ><img alt="My website Logo" src="/assets/img/platy-studio-logo.png"
+    ><img alt=" Logo" src="/assets/img/platy-studio-logo.png"
   /></a><button
     class="navbar-toggler"
     type="button"
@@ -185,7 +185,7 @@
 
 <!-- <nav class="navbar">
   <div class="logo">
-    <img alt="My website Logo" src="/assets/img/platy-studio-logo.png" />
+    <img alt=" Logo" src="/assets/img/platy-studio-logo.png" />
   </div>
   <div class="nav-link">
     <a href="#">BLOG</a>
@@ -221,7 +221,7 @@
   <script src="https://raw.githubusercontent.com/kansal12/platystudio_home/main/js/header.js"></script>
 </body> -->
 
-<nav>
+<!-- <nav>
   <div class="DIV-0">
     <div class="DIV-1">
       <div class="DIV-2">
@@ -476,7 +476,205 @@
       box-sizing: border-box;
     }
   </style>
-</nav>
+</nav> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Ensures proper scaling on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav {
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px 20px;
+        font-family: Inter, sans-serif;
+        position: relative;
+        height: 64px;
+      }
+
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo-nav-links {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+      }
+
+      .logo {
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 20px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: lightgray;
+      }
+
+      /* .nav-right .demo-btn {
+        background: linear-gradient(to right, #ff4242, #a1ff42, #42a1ff);
+        padding: 8px 16px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+      } */
+      .nav-right .demo-btn {
+        text-decoration: none;
+        box-sizing: border-box;
+        color: rgb(23, 23, 23);
+        font-family: Inter, "Inter Fallback";
+        font-feature-settings: normal;
+        font-size: 16px;
+        font-variation-settings: normal;
+        font-weight: 500;
+        letter-spacing: normal;
+        line-height: 24px;
+        padding: 8px 32px;
+        appearance: button;
+        background-color: rgba(0, 0, 0, 0);
+        background-image: linear-gradient(
+            rgb(255, 255, 255),
+            rgb(255, 255, 255)
+          ),
+          linear-gradient(
+            rgb(255, 255, 255) 50%,
+            rgba(255, 255, 255, 0.6) 80%,
+            rgba(0, 0, 0, 0)
+          ),
+          linear-gradient(
+            90deg,
+            rgb(255, 66, 66),
+            rgb(161, 255, 66),
+            rgb(66, 161, 255),
+            rgb(66, 208, 255),
+            rgb(161, 66, 255)
+          );
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        height: 44px;
+        animation: 2s linear 0s infinite normal none running rainbow;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background-size: 200%, 200%, 200%;
+        transition-duration: 0.15s;
+        transition-property: color, background-color, border-color,
+          text-decoration-color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        background-clip: padding-box, border-box, border-box;
+        background-origin: border-box, border-box, border-box;
+        border: 1px solid rgba(0, 0, 0, 0);
+      }
+
+      .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      /* Mobile responsiveness */
+      @media (max-width: 768px) {
+        .nav-links,
+        .nav-right {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          width: 100%;
+          background: rgba(0, 0, 0, 0.8);
+          padding: 10px 0;
+        }
+
+        .nav-links.show {
+          display: flex;
+          z-index: 10;
+          text-align: center;
+          background: rgba(0, 0, 0);
+        }
+
+        .menu-toggle {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="logo-nav-links">
+          <div class="nav-left">
+            <a href="https://www.platy.studio/" class="logo">Platy Studio</a>
+          </div>
+          <div class="nav-links">
+            <a href="https://www.platy.studio/#features">Features</a>
+            <a href="https://www.platy.studio/#how-it-works">How It Works</a>
+            <a href="https://www.platy.studio/#contact">Contact</a>
+            <a href="https://kansal12.github.io/" target="_blank">Blog</a>
+          </div>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="4" y1="6" x2="20" y2="6"></line>
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="18" x2="20" y2="18"></line>
+          </svg>
+        </button>
+        <div class="nav-right">
+          <a href="https://www.platy.studio/#schedule_demo" class="demo-btn"
+            >Schedule Demo</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      // Toggle the mobile menu
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".nav-links").classList.toggle("show");
+        });
+    </script>
+  </body>
+</html>
 
 
   <div class="intro-header"></div>
