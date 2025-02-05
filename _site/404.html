@@ -561,9 +561,9 @@
         color: rgb(23, 23, 23);
         font-family: Inter, "Inter Fallback";
         font-feature-settings: normal;
-        font-size: 16px;
+        font-size: 15px;
         font-variation-settings: normal;
-        font-weight: 500;
+        font-weight: 600;
         letter-spacing: normal;
         line-height: 24px;
         padding: 8px 32px;
@@ -604,6 +604,25 @@
         border: 1px solid rgba(0, 0, 0, 0);
       }
 
+      .demo-btn::before {
+        content: "";
+        position: absolute;
+        bottom: -20%;
+        left: 50%;
+        z-index: 0;
+        height: 20%;
+        width: 60%;
+        transform: translateX(-50%);
+        background-image: linear-gradient(
+          90deg,
+          hsl(0 100% 63%),
+          hsl(90 100% 63%),
+          hsl(210 100% 63%),
+          hsl(195 100% 63%),
+          hsl(270 100% 63%)
+        );
+        filter: blur(8px);
+      }
       .menu-toggle {
         display: none;
         background: none;
