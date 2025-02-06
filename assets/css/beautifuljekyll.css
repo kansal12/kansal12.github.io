@@ -19,8 +19,8 @@ layout: null
   --footer-hover-col: {{ site.footer-hover-col | default: "#0085A1" }};
 
   /* common CSS variables */
-  --body-font: "Inter", "sans-serif ";
-  --header-font: "Inter", "sans-serif";
+  --body-font: "";  /* if no font family given then it looks same as main site but if you give same font fmaily as main site then this will not work*/
+  --header-font: "";
   --mid-col: #808080;
 }
 
