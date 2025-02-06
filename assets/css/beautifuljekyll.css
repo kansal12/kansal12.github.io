@@ -19,8 +19,8 @@ layout: null
   --footer-hover-col: {{ site.footer-hover-col | default: "#0085A1" }};
 
   /* common CSS variables */
-  --body-font: "Inter", "Inter Fallback";
-  --header-font: "Inter", "Inter Fallback";
+  --body-font: "Inter", "sans-serif ";
+  --header-font: "Inter", "sans-serif";
   --mid-col: #808080;
 }
 
