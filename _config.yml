@@ -10,10 +10,11 @@
 ############################
 
 # Name of website
-title: ""
+title: "Platy.Studio | Blogs"
+favicon: /assets/favicon.svg
 
 # Your name to show in the footer
-author: Some Person
+author: Vaibhav Kansal
 
 ###############################################
 # --- List of links in the navigation bar --- #
@@ -36,7 +37,7 @@ round-avatar: true
 
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
 # then specify the following parameter
-title-img: assets/img/platy-studio-logo.png
+# title-img: /assets/img/thumb.png
 home-url: https://chiranjiv37.github.io/platy_website/
 
 #####################################
