@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sheet Menu</title>
+    <style>
+      /* Basic Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Button Styling */
+      .menu-button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+      }
+
+      .menu-icon {
+        font-size: 32px;
+      }
+
+      /* Sidebar Styles */
+      .sidebar {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 300px;
+        background-color: rgba(0, 0, 0, 0.95);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        padding: 20px;
+        z-index: 999;
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      nav {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px 16px;
+        border-radius: 8px;
+        transition: background-color 0.2s ease;
+      }
+
+      nav a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      /* Rainbow Button Styling */
+      .rainbow-button {
+        display: inline-block;
+        padding: 12px 20px;
+        margin-top: 16px;
+        background: linear-gradient(
+          90deg,
+          #ff6ec4,
+          #7873f5,
+          #4a9ff5,
+          #2ccfef,
+          #2de2a2
+        );
+        color: white;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: opacity 0.2s ease;
+        width: 100%;
+      }
+
+      .rainbow-button:hover {
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="menu-button" onclick="toggleMenu()">☰</button>
+
+    <div id="sidebar" class="sidebar">
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#Demo">Demo</a>
+        <a
+          href="https://kansal12.github.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Blog
+        </a>
+        <button class="rainbow-button" onclick="openDemo()">
+          Schedule Demo
+        </button>
+      </nav>
+    </div>
+
+    <script>
+      const sidebar = document.getElementById("sidebar");
+
+      function toggleMenu() {
+        sidebar.classList.toggle("open");
+      }
+
+      function openDemo() {
+        alert("Schedule Demo clicked!");
+      }
+    </script>
+  </body>
+</html>
